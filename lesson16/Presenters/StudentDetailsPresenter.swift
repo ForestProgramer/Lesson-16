@@ -14,16 +14,12 @@ protocol StudentInfoProtocol: AnyObject {
 
 final class StudentDetailsPresenter {
 
-    private weak var userView: StudentInfoProtocol?
-
     private var student: Student?
 
 
     // MARK: - Private
 
     func delegateStudentsInfo(student : Student?){
-        
         self.student = student
-        self.userView?.showInfo(data: student)
     }
 }

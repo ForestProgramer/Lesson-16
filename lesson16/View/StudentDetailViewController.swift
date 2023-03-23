@@ -20,7 +20,6 @@ class StudentDetailViewController: UIViewController {
         presenter = StudentDetailsPresenter()
         
         if let student = student{
-            print("\(student)")
             title = student.name
             self.studentImageView.load(url: student.logo)
             self.studentNameLabel.text = student.email

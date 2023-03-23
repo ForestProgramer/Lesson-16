@@ -32,8 +32,8 @@ class StudentsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? StudentDetailViewController,
            let indexPath = sender as? IndexPath {
-            print("Evrth is good")
             destination.showInfo(data: students[indexPath.row])
+            delegate.delegateStudentsInfo(student: students[indexPath.row])
         }
     }
 
